@@ -1,7 +1,6 @@
 package herencia;
 
 public class Atributos {
-	
 	public String[] arrayAtributos() {
 		String[] atributos= new String[16];
 		atributos[0]= "Usa lentes      ";
@@ -42,9 +41,5 @@ public class Atributos {
 			}
 		}
 	}
-	
-	
-	
-	
-
 }
+
