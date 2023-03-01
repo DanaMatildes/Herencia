@@ -1,7 +1,8 @@
 package herencia;
+import java.util.Scanner;
 
 public class Main {
-	public static void main(String[] args) {
+public static void main(String[] args) {
 		
 		Atributos array = new Atributos();
 		
@@ -71,10 +72,13 @@ public class Main {
 		System.out.println("\t\t\tV    F");
 		array.imprimeValores(personaje1.conteoValores(matriz1, matriz2, matriz3, matriz4, matriz5, matriz6, matriz7, matriz8, matriz9, matriz10, array.arrayAtributos()), array.arrayAtributos());
 	
+		Menu miMenu = new Menu();
+		
+		miMenu.menu(array.arrayAtributos());
+		
+		int resp= miMenu.seleccionar();
+		
+		System.out.print(resp);
+		miMenu.respuesta(resp, matriz10);
 		
 		
-		
-		
-	}
-
-}
