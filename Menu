@@ -1,0 +1,29 @@
+package herencia;
+import java.util.Scanner;
+
+public class Menu {
+	int opcion;
+	Scanner sc = new Scanner (System.in);
+	
+	public void menu(String[] array) {
+		System.out.println("\n\n ");
+		System.out.println("Preguntas: ");
+		int a= array.length;
+		int cont=0;
+		for(int m=0; m<a; m++) {
+			System.out.println(cont + ") ¿El personaje "+ array[m]+"?");
+			cont++;
+		}
+	}
+	
+	public int seleccionar() {
+		System.out.print("Inserte el número de la pregunta que desea: ");
+		opcion = sc.nextInt();
+		return(opcion);
+	}
+
+	public void respuesta(int pregunta, String[][] matriz){
+		
+	}
+
+}
