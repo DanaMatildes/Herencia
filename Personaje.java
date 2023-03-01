@@ -2,8 +2,8 @@ package herencia;
 import java.util.Random;
 
 
-public class Personaje extends Persona{
-	private String nombre;
+public class Personaje extends Persona {
+private String nombre;
 	
 	
 	public Personaje(String nombre) {
@@ -17,21 +17,38 @@ public class Personaje extends Persona{
 	
 	//devuelve una matriz de [atributo][true/false]
 	public String[][] setAtributos2(String[]array) {
-		
+		int cont=0;
+
 		String[] trueORfalse = new String[2];
 		trueORfalse[0] = "false";
 		trueORfalse[1] = "true";
 
 		String[][] atributos = new String[4][2];
+
 		
 		for(int i=0; i<atributos.length; i++) {
+			
+			
 			Random random = new Random();
-			int num = random.nextInt(16);
+			int num = random.nextInt(array.length-cont);
 			Random randomVF = new Random();
 			int valor = randomVF.nextInt(2);
+			
 			atributos[i][0]=array[num];
 			atributos[i][1]= trueORfalse[valor];
+			
+			if(num==16) {
+				array[16]=" ";
+			}else {
+				for(int n=num; n<array.length; n++) {
+					array[num] = array[num+1];
+				}
 			}
+			
+			cont++;
+			
+		}
+		
 		return(atributos);
 	}
 	
@@ -162,14 +179,4 @@ public class Personaje extends Persona{
 		return(matConteo);
 		
 	}
-	
-	
-
-	
-	
-
 }
-	
-
-	
-	
